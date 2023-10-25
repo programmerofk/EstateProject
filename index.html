@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estate</title>
-    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">  
 </head>
 <body>
-<body>
     <header>
         <div class="container">
             <nav class="menu">
                 <a href="">
-                    <img class="menu__img" src="/src/img/logo.svg" alt="Логотип">
+                    <img class="menu__img" src="./img/logo.svg" alt="Логотип">
 
                 </a>
                 <ul class="menu__list">
@@ -27,19 +26,39 @@
             </nav>
         </div>
     </header>
+
     <main>
         <section class="hero">
-            <div class="hero__wrapper">
-            <img class="hero__logo" src="../src/img/logo2.svg" alt="Лого2">
-            <h1 class="hero__title">We're here to help you find a new home.</h1>
+            <div class="hero__bg">
+                <div class="hero__wrapper">
+                    <img class="hero__logo" src="./img/logo2.svg" alt="Лого2">
+                    <h1 class="hero__title">We're here to help you find a new home.</h1>
+                    </div>
             </div>
 
             <div class="hero__circle">
                 <a href="">
-                    <img src="../src/img/arrow.svg" alt="стрелка">
+                    <img class="hero__img" src="./img/arrow.svg" alt="стрелка">
                 </a>
             </div>
         </section>
+
+        <section class="Listings">
+            <div class="Listing__container">
+                <h2 class="Listings__title">Our requirements</h2>
+                <h3 class="Listings__subtitle">How we choose our listings.</h3>
+                <p class="Listings__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
+            </div>
+            <div class="listings_wrapper">
+                <ul class="listings__list">
+                    <li class="listings__item"><img src="./img/listings__1.svg" alt="photo" class="listings__icon">Stellar locations</li>
+                    <li class="listings__item"><img src="" alt="" class="listings__icon">High quality builds</li>
+                    <li class="listings__item"><img src="" alt="" class="listings__icon">Expert interior design</li>
+                </ul>
+    
+            </div>
+        </section>
+        <!--  -->
     </main>
 </body>
 </html>
