@@ -1,64 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estate</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">  
-</head>
-<body>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <nav class="menu">
-                <a href="">
-                    <img class="menu__img" src="./img/logo.svg" alt="Логотип">
-
-                </a>
-                <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__link" href="#">Listings</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">About us</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Uslugi</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container">
+        <nav class="menu">
+          <a href="">
+            <img class="menu__img" src="./img/logo.svg" alt="Логотип" />
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Listings</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Newsroom</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Contact</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Our team</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero__bg">
-                <div class="hero__wrapper">
-                    <img class="hero__logo" src="./img/logo2.svg" alt="Лого2">
-                    <h1 class="hero__title">We're here to help you find a new home.</h1>
-                    </div>
-            </div>
-
-            <div class="hero__circle">
-                <a href="">
-                    <img class="hero__img" src="./img/arrow.svg" alt="стрелка">
-                </a>
-            </div>
-        </section>
-
-        <section class="Listings">
-            <div class="Listing__container">
-                <h2 class="Listings__title">Our requirements</h2>
-                <h3 class="Listings__subtitle">How we choose our listings.</h3>
-                <p class="Listings__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
-            </div>
-            <div class="listings_wrapper">
-                <ul class="listings__list">
-                    <li class="listings__item"><img src="./img/listings__1.svg" alt="photo" class="listings__icon">Stellar locations</li>
-                    <li class="listings__item"><img src="" alt="" class="listings__icon">High quality builds</li>
-                    <li class="listings__item"><img src="" alt="" class="listings__icon">Expert interior design</li>
-                </ul>
-    
-            </div>
-        </section>
-        <!--  -->
+      <section class="hero">
+        <div class="hero__bg">
+          <div class="hero__wrapper">
+            <img class="hero__logo" src="./img/logo2.svg" alt="Лого2" />
+            <h1 class="hero__title">We're here to help you find a new home.</h1>
+          </div>
+          <a class="hero__circle" href="">
+            <img class="hero__img" src="./img/arrow.svg" alt="стрелка" />
+          </a>
+        </div>
+      </section>
+      <section class="Listings">
+        <div class="Listing__container">
+          <h2 class="Listings__title">Our requirements</h2>
+          <h3 class="Listings__subtitle">How we choose our listings.</h3>
+          <p class="Listings__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            scelerisque aliquam odio et faucibus.
+          </p>
+        </div>
+        <div class="listings__wrapper">
+          <div class="listings__img">
+            <img src="./img/listings__1.svg" alt="" />
+          </div>
+          <ul class="listings__list">
+            <li class="listings__item">
+              <div class="listings__inner">
+                <img
+                  src="./img/imagegeo.svg"
+                  alt="PHOTO"
+                  class="listings__icon"
+                />
+              </div>
+              <h2 class="listings__title1">Stellar locations</h2>
+              <p class="listings__par">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </li>
+            <li class="listings__item">
+              <div class="listings__inner">
+                <img src="./img/imagehouse.svg" alt="" class="listings__icon" />
+              </div>
+              <h2 class="listings__title1">High quality builds</h2>
+              <p class="listings__par">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </li>
+            <li class="listings__item">
+              <div class="listings__inner">
+                <img src="/img/imagebarby.svg" alt="" class="listings__icon" />
+              </div>
+              <h2 class="listings__title1">Expert interior design</h2>
+              <p class="listings__par">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <img src="./img/osobnyak.svg" alt="Особняк" class="newsroom__img" />
+      <section class="newsroom">
+        <div class="container">
+          <h2 class="newsroom__title">Current listings</h2>
+          <h3 class="newsroom__subtitle">What we have in store for you.</h3>
+          <p class="newsroom__text">
+            Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula.
+            Vestibulum sit amet urna turpis. Mauris euismod elit et nisi
+            ultrices, ut faucibus orci tincidunt.
+          </p>
+          <ul class="newsroom__list">
+            <li class="newsroom__item">
+              <img src="./img/osov.svg" alt="" class="newsroom__icon" />
+              <h3 class="title">House</h3>
+              <p class="subtitle">California St.</p>
+              <ul class="newsroom__list-icons">
+                <li class="newsroom__item-icons">
+                  <img src="./img/bedsicon.svg" alt="icon-beds" />
+                  <span class="newsroom__item-icons-text">16 beds</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
+                  <span class="newsroom__item-icons-text">2 bathrooms</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/dooricon.svg" alt="dooricon" />
+                  <span class="newsroom__item-icons-text">11 rooms</span>
+                </li>
+              </ul>
+            </li>
+            <li class="newsroom__item">
+              <img src="./img/osov3.svg" alt="" class="newsroom__icon" />
+              <h3 class="title">Villa</h3>
+              <p class="subtitle">Welford Gardens</p>
+              <ul class="newsroom__list-icons">
+                <li class="newsroom__item-icons">
+                  <img src="./img/bedsicon.svg" alt="icon-bathroom" />
+                  <span class="newsroom__item-icons-text">12 beds</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
+                  <span class="newsroom__item-icons-text">3 bathrooms</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/dooricon.svg" alt="dooricon" />
+                  <span class="newsroom__item-icons-text">16 rooms</span>
+                </li>
+              </ul>
+            </li>
+            <li class="newsroom__item">
+              <img src="./img/osov2.svg" alt="" class="newsroom__icon" />
+              <h3 class="title">House</h3>
+              <p class="subtitle">The Grove</p>
+              <ul class="newsroom__list-icons">
+                <li class="newsroom__item-icons">
+                  <img src="./img/bedsicon.svg" alt="icon-bathroom" />
+                  <span class="newsroom__item-icons-text">12 beds</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
+                  <span class="newsroom__item-icons-text">2 bathrooms</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/dooricon.svg" alt="dooricon" />
+                  <span class="newsroom__item-icons-text">14 rooms</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="newsroom__list">
+            <li class="newsroom__item">
+              <img
+                src="./img/IMAGEbathroom1.svg"
+                alt=""
+                class="newsroom__icon"
+              />
+              <h3 class="title">Apartment</h3>
+              <p class="subtitle">Wallace St.</p>
+              <ul class="newsroom__list-icons">
+                <li class="newsroom__item-icons">
+                  <img src="./img/bedsicon.svg" alt="icon-beds" />
+                  <span class="newsroom__item-icons-text">10 beds</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
+                  <span class="newsroom__item-icons-text">2 bathrooms</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/dooricon.svg" alt="dooricon" />
+                  <span class="newsroom__item-icons-text">8 rooms</span>
+                </li>
+              </ul>
+            </li>
+            <li class="newsroom__item">
+              <img
+                src="./img/IMAGEbathroom2.svg"
+                alt=""
+                class="newsroom__icon"
+              />
+              <h3 class="title">Apartment</h3>
+              <p class="subtitle">Dwight Way</p>
+              <ul class="newsroom__list-icons">
+                <li class="newsroom__item-icons">
+                  <img src="./img/bedsicon.svg" alt="icon-bathroom" />
+                  <span class="newsroom__item-icons-text">8 beds</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
+                  <span class="newsroom__item-icons-text">1 bathrooms</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/dooricon.svg" alt="dooricon" />
+                  <span class="newsroom__item-icons-text">6 rooms</span>
+                </li>
+              </ul>
+            </li>
+            <li class="newsroom__item">
+              <img
+                src="./img/IMAGEbathroom3.svg"
+                alt=""
+                class="newsroom__icon"
+              />
+              <h3 class="title">House</h3>
+              <p class="subtitle">North Avenue</p>
+              <ul class="newsroom__list-icons">
+                <li class="newsroom__item-icons">
+                  <img src="./img/bedsicon.svg" alt="icon-bathroom" />
+                  <span class="newsroom__item-icons-text">14 beds</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
+                  <span class="newsroom__item-icons-text">3 bathrooms</span>
+                </li>
+                <li class="newsroom__item-icons">
+                  <img src="./img/dooricon.svg" alt="dooricon" />
+                  <span class="newsroom__item-icons-text">11 rooms</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button class="newsroom__button">
+            Show all listings<img
+              class="newsroom__arrow"
+              src="./img/Path.svg"
+              alt="стрелочка xD"
+            />
+          </button>
+        </div>
+      </section>
+      <!--  -->
     </main>
-</body>
+  </body>
 </html>
