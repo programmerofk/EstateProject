@@ -1,0 +1,18 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  &__list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  &_link {
+    color: #444;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 106.667% */
+  }
+}
