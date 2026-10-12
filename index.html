@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estate</title>
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,8 +12,21 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/index.min.css" />
   </head>
+  <button class="back-to-top" id="backToTop" aria-label="Наверх">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
   <body>
     <header>
       <div class="container">
@@ -20,24 +34,87 @@
           <a href="">
             <img class="menu__img" src="./img/logo.svg" alt="Логотип" />
           </a>
+
           <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Listings</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Newsroom</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Contact</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Our team</a>
-            </li>
+            <a class="menu__link" href="#listings">Listings</a>
+            <a class="menu__link" href="#newsroom">Newsroom</a>
+            <a class="menu__link" href="#contact">Contact</a>
+            <a class="menu__link" href="#team">Our team</a>
           </ul>
+
+          <div id="menu" class="menu__modal">
+            <button class="menu__btn-close" aria-label="Закрыть меню">×</button>
+            <ul class="menu__list-burger">
+              <a class="menu__link" href="#listings">Listings</a>
+              <a class="menu__link" href="#newsroom">Newsroom</a>
+              <a class="menu__link" href="#contact">Contact</a>
+              <a class="menu__link" href="#team">Our team</a>
+            </ul>
+          </div>
+          <div class="menu__actions">
+            <button
+              class="favorites-btn"
+              id="favoritesBtn"
+              aria-label="Избранное"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                />
+              </svg>
+              <span class="favorites-btn__count" id="favoritesCount">0</span>
+            </button>
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Переключить тему"
+            >
+              <svg
+                class="theme-toggle__sun"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                />
+              </svg>
+              <svg
+                class="theme-toggle__moon"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            </button>
+          </div>
+          <button id="burger_btn" class="menu__burger-btn">
+            <img src="./img/Burger.svg" alt="Меню" />
+          </button>
         </nav>
       </div>
     </header>
-
     <main>
       <section class="hero">
         <div class="hero__bg">
@@ -61,7 +138,7 @@
         </div>
         <div class="listings__wrapper">
           <div class="listings__img">
-            <img src="./img/listings__1.svg" alt="" />
+            <img src="./img/listings__1.svg" alt="" class="wrapper__img" />
           </div>
           <ul class="listings__list">
             <li class="listings__item">
@@ -88,7 +165,7 @@
             </li>
             <li class="listings__item">
               <div class="listings__inner">
-                <img src="/img/imagebarby.svg" alt="" class="listings__icon" />
+                <img src="./img/imagebarby.svg" alt="" class="listings__icon" />
               </div>
               <h2 class="listings__title1">Expert interior design</h2>
               <p class="listings__par">
@@ -99,7 +176,8 @@
         </div>
       </section>
       <img src="./img/osobnyak.svg" alt="Особняк" class="newsroom__img" />
-      <section class="newsroom">
+
+      <section class="newsroom" id="listings">
         <div class="container">
           <h2 class="newsroom__title">Current listings</h2>
           <h3 class="newsroom__subtitle">What we have in store for you.</h3>
@@ -108,147 +186,50 @@
             Vestibulum sit amet urna turpis. Mauris euismod elit et nisi
             ultrices, ut faucibus orci tincidunt.
           </p>
-          <ul class="newsroom__list">
-            <li class="newsroom__item">
-              <img src="./img/osov.svg" alt="" class="newsroom__icon" />
-              <h3 class="title">House</h3>
-              <p class="subtitle">California St.</p>
-              <ul class="newsroom__list-icons">
-                <li class="newsroom__item-icons">
-                  <img src="./img/bedsicon.svg" alt="icon-beds" />
-                  <span class="newsroom__item-icons-text">16 beds</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
-                  <span class="newsroom__item-icons-text">2 bathrooms</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/dooricon.svg" alt="dooricon" />
-                  <span class="newsroom__item-icons-text">11 rooms</span>
-                </li>
-              </ul>
-            </li>
-            <li class="newsroom__item">
-              <img src="./img/osov3.svg" alt="" class="newsroom__icon" />
-              <h3 class="title">Villa</h3>
-              <p class="subtitle">Welford Gardens</p>
-              <ul class="newsroom__list-icons">
-                <li class="newsroom__item-icons">
-                  <img src="./img/bedsicon.svg" alt="icon-bathroom" />
-                  <span class="newsroom__item-icons-text">12 beds</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
-                  <span class="newsroom__item-icons-text">3 bathrooms</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/dooricon.svg" alt="dooricon" />
-                  <span class="newsroom__item-icons-text">16 rooms</span>
-                </li>
-              </ul>
-            </li>
-            <li class="newsroom__item">
-              <img src="./img/osov2.svg" alt="" class="newsroom__icon" />
-              <h3 class="title">House</h3>
-              <p class="subtitle">The Grove</p>
-              <ul class="newsroom__list-icons">
-                <li class="newsroom__item-icons">
-                  <img src="./img/bedsicon.svg" alt="icon-bathroom" />
-                  <span class="newsroom__item-icons-text">12 beds</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
-                  <span class="newsroom__item-icons-text">2 bathrooms</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/dooricon.svg" alt="dooricon" />
-                  <span class="newsroom__item-icons-text">14 rooms</span>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="newsroom__list">
-            <li class="newsroom__item">
-              <img
-                src="./img/IMAGEbathroom1.svg"
-                alt=""
-                class="newsroom__icon"
-              />
-              <h3 class="title">Apartment</h3>
-              <p class="subtitle">Wallace St.</p>
-              <ul class="newsroom__list-icons">
-                <li class="newsroom__item-icons">
-                  <img src="./img/bedsicon.svg" alt="icon-beds" />
-                  <span class="newsroom__item-icons-text">10 beds</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
-                  <span class="newsroom__item-icons-text">2 bathrooms</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/dooricon.svg" alt="dooricon" />
-                  <span class="newsroom__item-icons-text">8 rooms</span>
-                </li>
-              </ul>
-            </li>
-            <li class="newsroom__item">
-              <img
-                src="./img/IMAGEbathroom2.svg"
-                alt=""
-                class="newsroom__icon"
-              />
-              <h3 class="title">Apartment</h3>
-              <p class="subtitle">Dwight Way</p>
-              <ul class="newsroom__list-icons">
-                <li class="newsroom__item-icons">
-                  <img src="./img/bedsicon.svg" alt="icon-bathroom" />
-                  <span class="newsroom__item-icons-text">8 beds</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
-                  <span class="newsroom__item-icons-text">1 bathrooms</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/dooricon.svg" alt="dooricon" />
-                  <span class="newsroom__item-icons-text">6 rooms</span>
-                </li>
-              </ul>
-            </li>
-            <li class="newsroom__item">
-              <img
-                src="./img/IMAGEbathroom3.svg"
-                alt=""
-                class="newsroom__icon"
-              />
-              <h3 class="title">House</h3>
-              <p class="subtitle">North Avenue</p>
-              <ul class="newsroom__list-icons">
-                <li class="newsroom__item-icons">
-                  <img src="./img/bedsicon.svg" alt="icon-bathroom" />
-                  <span class="newsroom__item-icons-text">14 beds</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/bathroomsicon.svg" alt="bathrooms" />
-                  <span class="newsroom__item-icons-text">3 bathrooms</span>
-                </li>
-                <li class="newsroom__item-icons">
-                  <img src="./img/dooricon.svg" alt="dooricon" />
-                  <span class="newsroom__item-icons-text">11 rooms</span>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <div class="newsroom__sort">
+            <label for="sortSelect" class="newsroom__sort-label"
+              >Sort by:</label
+            >
+            <select class="newsroom__sort-select" id="sortSelect">
+              <option value="default">Default</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="name-asc">Name: A → Z</option>
+              <option value="name-desc">Name: Z → A</option>
+            </select>
+          </div>
+          <div class="newsroom__filters">
+            <button class="newsroom__filter is-active" data-filter="all">
+              All
+            </button>
+            <button class="newsroom__filter" data-filter="house">Houses</button>
+            <button class="newsroom__filter" data-filter="villa">Villas</button>
+            <button class="newsroom__filter" data-filter="apartment">
+              Apartments
+            </button>
+          </div>
+          <ul class="newsroom__list" id="propertiesList"></ul>
+
           <button class="newsroom__button">
             Show all listings<img
               class="newsroom__arrow"
               src="./img/Path.svg"
-              alt="стрелочка xD"
+              alt="arrow"
             />
           </button>
         </div>
+        <!-- ===================== FAVORITES ===================== -->
+        <section class="favorites" id="favorites" hidden>
+          <div class="container">
+            <h2 class="favorites__title">Your favorites</h2>
+            <p class="favorites__subtitle">
+              Saved properties you can come back to anytime.
+            </p>
+            <ul class="newsroom__list" id="favoritesList"></ul>
+          </div>
+        </section>
       </section>
-
-      <section class="team">
+      <section class="team" id="team">
         <div class="team__wrapper container">
           <div class="team__inner">
             <h4 class="team__subtitle">Our people</h4>
@@ -261,7 +242,7 @@
               nisi ultrices, ut faucibus orci tincidunt.
             </p>
             <button class="team__btn">
-              View our team<img src="/img/IMAGEarrowright.svg" alt="arrow" />
+              View our team<img src="./img/IMAGEarrowright.svg" alt="arrow" />
             </button>
           </div>
           <ul class="team__list">
@@ -310,7 +291,7 @@
           </ul>
         </div>
       </section>
-      <section class="store">
+      <section class="store" id="newsroom">
         <div class="store__inner">
           <h4 class="store__subtitle">NEWSROOM</h4>
           <h2 class="store__title">Writing from Estate.</h2>
@@ -350,31 +331,244 @@
           </li>
         </ul>
         <button class="store__btn">
-          Newsroom <img src="./img/IMAGEarrowright.svg" alt="Стрелка направо" />
+          Newsroom
+          <img src="./img/IMAGEarrowright.svg" alt="Стрелка направо" />
         </button>
       </section>
       <section class="testimonials">
-        <div class="testimonials__inner">
+        <div class="container">
+          <h4 class="testimonials__subtitle">Testimonials</h4>
+          <h2 class="testimonials__title">What our customers say.</h2>
+
           <ul class="testimonials__list">
             <li class="testimonials__item">
-              <img src="./img/IMAGEzvezda.svg" alt="Звёзды" />
-              <img src="./img/IMAGEzvezda.svg" alt="Звёзды" />
-              <img src="./img/IMAGEzvezda.svg" alt="Звёзды" />
-              <img src="./img/IMAGEzvezda.svg" alt="Звёзды" />
-              <img src="./img/IMAGEzvezda.svg" alt="Звёзды" />
+              <div class="testimonials__stars">
+                <img src="./img/IMAGEzvezda.svg" alt="star" />
+                <img src="./img/IMAGEzvezda.svg" alt="star" />
+                <img src="./img/IMAGEzvezda.svg" alt="star" />
+                <img src="./img/IMAGEzvezda.svg" alt="star" />
+                <img src="./img/IMAGEzvezda.svg" alt="star" />
+              </div>
+              <h3 class="testimonials__item-title">
+                We found the perfect home!
+              </h3>
+              <p class="testimonials__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                cursus id rutrum lorem imperdiet.
+              </p>
+              <p class="testimonials__item-author">Nate Davidsson</p>
             </li>
-          </ul>
-          <ul class="testimonials__list">
+
             <li class="testimonials__item">
-              <img src="./img/IMAGEzvezda.svg" alt="Звёзды" />
-              <img src="./img/IMAGEzvezda.svg" alt="Звёзды" />
-              <img src="./img/IMAGEzvezda.svg" alt="Звёзды" />
-              <img src="./img/IMAGEzvezda.svg" alt="Звёзды" />
-              <img src="./img/IMAGEzvezda.svg" alt="Звёзды" />
+              <div class="testimonials__stars">
+                <img src="./img/IMAGEzvezda.svg" alt="star" />
+                <img src="./img/IMAGEzvezda.svg" alt="star" />
+                <img src="./img/IMAGEzvezda.svg" alt="star" />
+                <img src="./img/IMAGEzvezda.svg" alt="star" />
+              </div>
+              <h3 class="testimonials__item-title">
+                We're so happy with Estate.
+              </h3>
+              <p class="testimonials__item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                cursus id rutrum lorem imperdiet.
+              </p>
+              <p class="testimonials__item-author">Laura Poulo</p>
             </li>
           </ul>
         </div>
       </section>
+      <section class="cta" id="contact">
+        <div class="container">
+          <h4 class="cta__subtitle">Free consultation</h4>
+          <h2 class="cta__title">Get in touch with us today.</h2>
+          <p class="cta__text">
+            Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula.
+            Vestibulum sit amet urna turpis. Mauris euismod elit et nisi
+            ultrices, ut faucibus orci tincidunt.
+          </p>
+          <div class="cta__buttons">
+            <button class="cta__btn cta__btn--primary">Contact</button>
+            <button class="cta__btn cta__btn--secondary">See listings</button>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <a href="#" class="footer__logo">
+          <img src="./img/logo2.svg" alt="Estate" />
+        </a>
+
+        <div class="footer__grid">
+          <div class="footer__col">
+            <h4 class="footer__col-title">Pages</h4>
+            <ul class="footer__col-list">
+              <li><a href="#" class="footer__link">Start</a></li>
+              <li><a href="#" class="footer__link">Listings</a></li>
+              <li><a href="#" class="footer__link">Listings alt. 2</a></li>
+              <li><a href="#" class="footer__link">Contact</a></li>
+              <li><a href="#" class="footer__link">Legal</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Company</h4>
+            <ul class="footer__col-list">
+              <li><a href="#" class="footer__link">About</a></li>
+              <li><a href="#" class="footer__link">Our team</a></li>
+              <li><a href="#" class="footer__link">Newsroom</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Utility</h4>
+            <ul class="footer__col-list">
+              <li><a href="#" class="footer__link">Instructions</a></li>
+              <li><a href="#" class="footer__link">Style guide</a></li>
+              <li><a href="#" class="footer__link">Licenses</a></li>
+              <li><a href="#" class="footer__link">Changelog</a></li>
+              <li><a href="#" class="footer__link">404</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col footer__col--newsletter">
+            <h4 class="footer__col-title">Newsletter</h4>
+            <p class="footer__newsletter-text">
+              Subscribe to our (infrequent) newsletter where we share news about
+              upcoming listings and projects.
+            </p>
+            <form class="footer__form" id="newsletterForm" novalidate>
+              <div class="footer__form-row">
+                <input
+                  type="email"
+                  class="footer__input"
+                  id="newsletterEmail"
+                  placeholder="Email"
+                  autocomplete="email"
+                />
+                <button type="submit" class="footer__submit">Submit</button>
+              </div>
+              <p class="footer__form-message" id="newsletterMessage"></p>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            © Estate, LLC. All rights reserved. Powered by Webflow
+          </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="#" aria-label="LinkedIn">
+                <img src="./img/FrameIN.svg" alt="LinkedIn" />
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Facebook">
+                <img src="./img/FrameFACEBOOK.svg" alt="Facebook" />
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <img src="./img/FrameINSTAGRAMM.svg" alt="Instagram" />
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter">
+                <img src="./img/FrameTWITTER.svg" alt="Twitter" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="propertyModal">
+      <div class="modal__overlay" data-close></div>
+      <div class="modal__content">
+        <button class="modal__close" data-close aria-label="Закрыть">×</button>
+
+        <div class="modal__image">
+          <img id="modalImage" src="" alt="" />
+
+          <button
+            class="modal__arrow modal__arrow--prev"
+            id="sliderPrev"
+            aria-label="Предыдущий объект"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+
+          <button
+            class="modal__arrow modal__arrow--next"
+            id="sliderNext"
+            aria-label="Следующий объект"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+
+          <div class="modal__counter" id="modalCounter">1 / 6</div>
+        </div>
+
+        <div class="modal__body">
+          <span class="modal__type" id="modalType">House</span>
+          <h3 class="modal__title" id="modalTitle">California St.</h3>
+          <p class="modal__price" id="modalPrice">$1,200,000</p>
+
+          <ul class="modal__features">
+            <li>
+              <img src="./img/bedsicon.svg" alt="" />
+              <span id="modalBeds">16 beds</span>
+            </li>
+            <li>
+              <img src="./img/ShapeBathroom.svg" alt="" />
+              <span id="modalBaths">2 bathrooms</span>
+            </li>
+            <li>
+              <img src="./img/dooricon.svg" alt="" />
+              <span id="modalRooms">11 rooms</span>
+            </li>
+          </ul>
+
+          <p class="modal__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla.
+          </p>
+
+          <button class="modal__cta">Contact agent</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
