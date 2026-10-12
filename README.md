@@ -4,7 +4,7 @@
 
 ## 🔗 Live Demo
 
-**[Посмотреть сайт →](https://estate-project.vercel.app)**
+**[Посмотреть сайт →](https://estate-project-pi.vercel.app/)**
 
 ## ✨ Функционал
 
